@@ -6,9 +6,9 @@
     <title>Results of Scraping</title>
   </head>
   <body>
-    {% for link in links %}
+    {% for link in data %}
     <!-- A new line here -->
-    {{ link}} <br />
+    {{ link.name }} -----> {{ link.address }} <br />
     <!-- A new line here -->
     {% endfor %}
   </body>
