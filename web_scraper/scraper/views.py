@@ -25,6 +25,6 @@ def scraping(request):
     return render(request, 'scraper/scrape.html', {'data': data})
 
 
-def delete(request):
+def clear(request):
     Link.objects.all().delete()
     return redirect(request, 'scraping')
