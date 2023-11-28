@@ -14,9 +14,10 @@
   <body>
     <div class="container">
       <form method='post' class="row g-3 mt-4" action="{% url 'scraping' %}">
+        {% csrf_token %}
         <div class="col-md-9">
           <label for="site_url" class="visually-hidden">URL of site to scrape</label>
-          <input type="password" name="site_url" class="form-control" id="site_url" placeholder="https://www.google.com">
+          <input type="text" name="site_url" class="form-control" id="site_url" placeholder="https://www.google.com">
         </div>
         <div class="col-md-1">
           <button type="submit" class="btn btn-primary mb-3">Scrape!</button>
