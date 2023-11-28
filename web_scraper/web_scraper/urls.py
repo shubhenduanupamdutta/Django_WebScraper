@@ -20,6 +20,6 @@ from scraper import views
 
 urlpatterns = [
     path('', views.scraping, name='scraping'),
-    path('delete/', views.clear, name='clear'),
+    path('clear/', views.clear, name='clear'),
     path('admin/', admin.site.urls),
 ]

@@ -27,4 +27,4 @@ def scraping(request):
 
 def clear(request):
     Link.objects.all().delete()
-    return redirect(request, 'scraping')
+    return redirect('scraping')
