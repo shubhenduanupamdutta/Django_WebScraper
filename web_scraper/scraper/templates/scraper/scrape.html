@@ -13,6 +13,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12 m-5">
+          <h1 class="text-center">Link Collector</h1>
+        </div>
+      </div>
+
       <form method='post' class="row g-3 mt-4" action="{% url 'scraping' %}">
         {% csrf_token %}
         <div class="col-md-9">
