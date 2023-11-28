@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 import requests
 from bs4 import BeautifulSoup
 from .models import Link
@@ -19,3 +19,8 @@ def scraping(request):
     data = Link.objects.all()
 
     return render(request, 'scraper/scrape.html', {'data': data})
+
+
+def delete(request):
+    Link.objects.all().delete()
+    return redirect('scraping')
