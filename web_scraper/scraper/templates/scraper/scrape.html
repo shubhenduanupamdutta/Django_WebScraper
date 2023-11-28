@@ -13,27 +13,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <form method="post" action="{% url 'scraping' %}">
-          {% csrf_token %}
-          <div class="col-md-4">
-            <input
-              class="form-control"
-              type="text"
-              id="site"
-              name="site"
-              placeholder="Enter site address"
-            />
-          </div>
-          <div class="col-md-1">
-            <button class="btn btn-primary mx-3" type="submit">Scrape</button>
-          </div>
-        </form>
-
-        <div class="col-md-7">
-          <a class="btn btn-warning" href="{% url 'delete' %}">Delete All</a>
+      <form method='post' class="row g-3 mt-4" action="{% url 'scraping' %}">
+        <div class="col-md-9">
+          <label for="site_url" class="visually-hidden">URL of site to scrape</label>
+          <input type="password" name="site_url" class="form-control" id="site_url" placeholder="https://www.google.com">
         </div>
-      </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary mb-3">Scrape!</button>
+        </div>
+        <div class="col-md-2">
+          <a href="{% url 'delete' %}" class="btn btn-danger mb-3">Clear</a>
+        </div>
+      </form>
+      
 
       <div class="row">
         <div class="col-md-8">
