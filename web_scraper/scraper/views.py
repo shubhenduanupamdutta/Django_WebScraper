@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # Create your views here.
 
 
-def scrape(request):
+def scraping(request):
     response = requests.get('https://www.google.com/')
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'html.parser')
